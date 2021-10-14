@@ -1,41 +1,32 @@
-import { v4 } from 'uuid';
+import { v4 } from "uuid";
 
-const messages = [{
-
+const messages = [
+  {
     id: v4(),
-    sender:"M",
-    content: "Hello. This is customer support."
-
-},{
-
+    sender: "M",
+    content: "Hello. This is customer support.",
+  },
+  {
     id: v4(),
-    sender:"M",
-    content: "How can we assist you today?"
-    
-}];
+    sender: "M",
+    content: "How can we assist you today?",
+  },
+];
 
-export const ChatMessageService = {
-    async getMessages(){
-        
-        return messages;
-
-    },
-    async submitMessage({sender, content}){
-
-        messages.push({
-            sender,
-            content,
-            id: v4()
-        })
-
-    },
-    subscribe(){
-        
-        return function*(){
-
-            console.log("You subscribed");
-            
-        }
-
-    }
-}
+export const ChatMessageService = (messages = _messages) => ({
+  async getMessages() {
+    return messages;
+  },
+  async submitMessage({ sender, content }) {
+    messages.push({
+      sender,
+      content,
+      id: v4(),
+    });
+  },
+  subscribe() {
+    return function*() {
+      console.log("You subscribed");
+    };
+  },
+});

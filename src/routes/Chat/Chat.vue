@@ -40,8 +40,6 @@
 <script>
 export default {
   data() {
-    console.log("This?", this);
-
     return {
       userMessage: "Where is my order?",
       messages: this.$attrs.messages || [],
