@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Better Globoticket Customer Service Chat</h1>
+    <h1>Even Better Globoticket Customer Service Chat</h1>
 
     <div class="card mb-3">
       <div class="card-body">
