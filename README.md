@@ -5,3 +5,17 @@
 - jest.config
 - type: module
 - use BRIDGE version of babel-core
+
+## Commands
+
+````
+npm test
+npm test -- -u
+````
+
+Or
+
+````
+npm run test
+npm run test-update
+````
